@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		26366571247E4A1400028A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26366570247E4A1400028A70 /* AppDelegate.swift */; };
 		26366573247E4A1400028A70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26366572247E4A1400028A70 /* SceneDelegate.swift */; };
-		26366575247E4A1400028A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26366574247E4A1400028A70 /* ViewController.swift */; };
+		26366575247E4A1400028A70 /* SearchCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26366574247E4A1400028A70 /* SearchCountryViewController.swift */; };
 		26366578247E4A1400028A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26366576247E4A1400028A70 /* Main.storyboard */; };
 		2636657A247E4A1500028A70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26366579247E4A1500028A70 /* Assets.xcassets */; };
 		2636657D247E4A1500028A70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2636657B247E4A1500028A70 /* LaunchScreen.storyboard */; };
 		26366588247E4A1500028A70 /* RestCountriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26366587247E4A1500028A70 /* RestCountriesTests.swift */; };
 		26366593247E4A1500028A70 /* RestCountriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26366592247E4A1500028A70 /* RestCountriesUITests.swift */; };
+		263665A2247E4CC000028A70 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263665A1247E4CC000028A70 /* CountryData.swift */; };
+		263665A6247E593A00028A70 /* SearchCountryResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263665A5247E593A00028A70 /* SearchCountryResultViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		2636656D247E4A1400028A70 /* RestCountries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestCountries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26366570247E4A1400028A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26366572247E4A1400028A70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		26366574247E4A1400028A70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26366574247E4A1400028A70 /* SearchCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountryViewController.swift; sourceTree = "<group>"; };
 		26366577247E4A1400028A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26366579247E4A1500028A70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2636657C247E4A1500028A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		2636658E247E4A1500028A70 /* RestCountriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestCountriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26366592247E4A1500028A70 /* RestCountriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestCountriesUITests.swift; sourceTree = "<group>"; };
 		26366594247E4A1500028A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		263665A1247E4CC000028A70 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
+		263665A5247E593A00028A70 /* SearchCountryResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountryResultViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		2636656F247E4A1400028A70 /* RestCountries */ = {
 			isa = PBXGroup;
 			children = (
+				263665A4247E582700028A70 /* CountriesViewModels */,
+				263665A3247E580D00028A70 /* ViewControllers */,
+				263665A0247E4C8400028A70 /* Model */,
 				26366570247E4A1400028A70 /* AppDelegate.swift */,
 				26366572247E4A1400028A70 /* SceneDelegate.swift */,
-				26366574247E4A1400028A70 /* ViewController.swift */,
 				26366576247E4A1400028A70 /* Main.storyboard */,
 				26366579247E4A1500028A70 /* Assets.xcassets */,
 				2636657B247E4A1500028A70 /* LaunchScreen.storyboard */,
@@ -126,6 +132,30 @@
 				26366594247E4A1500028A70 /* Info.plist */,
 			);
 			path = RestCountriesUITests;
+			sourceTree = "<group>";
+		};
+		263665A0247E4C8400028A70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				263665A1247E4CC000028A70 /* CountryData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		263665A3247E580D00028A70 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				26366574247E4A1400028A70 /* SearchCountryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		263665A4247E582700028A70 /* CountriesViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				263665A5247E593A00028A70 /* SearchCountryResultViewModel.swift */,
+			);
+			path = CountriesViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26366575247E4A1400028A70 /* ViewController.swift in Sources */,
+				263665A6247E593A00028A70 /* SearchCountryResultViewModel.swift in Sources */,
+				26366575247E4A1400028A70 /* SearchCountryViewController.swift in Sources */,
 				26366571247E4A1400028A70 /* AppDelegate.swift in Sources */,
+				263665A2247E4CC000028A70 /* CountryData.swift in Sources */,
 				26366573247E4A1400028A70 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
