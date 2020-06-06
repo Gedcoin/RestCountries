@@ -14,12 +14,11 @@ struct CountryData: Codable {
     var capital: String
     var region: String
     var population: Int
-    var area: Double
-    var currencies: Currency
+    var currencies: [Currency]
 }
 
 struct Currency: Codable {
-    var code: String
-    var name: String
-    var symbol: String
+    var code: String?
+    var name: String?
+    var symbol: String?
 }

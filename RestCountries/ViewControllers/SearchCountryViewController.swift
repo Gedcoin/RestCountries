@@ -21,15 +21,5 @@ class SearchCountryViewController: UIViewController, UISearchBarDelegate {
         
     }
 
-    /*func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        self.view.endEditing(true)
-    }
-    
-    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
-        
-        self.view.endEditing(true)
-        return true
-    }*/
-
 }
 
