@@ -13,6 +13,7 @@ class SearchCountryViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet var countriesSearchString: UISearchBar!
     
     let searchCountryResult = SearchCountryResultViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,5 +22,17 @@ class SearchCountryViewController: UIViewController, UISearchBarDelegate {
         
     }
 
+    @IBAction func listAllCountriesButtonClick(_ sender: UIButton) {
+        let countryResultVC = storyboard?.instantiateViewController(identifier: "CountrySearchResultViewController") as! CountrySearchResultViewController
+        
+        if let data = searchCountryResult.countryData {
+            countryResultVC.countryData = data
+        }
+        
+        navigationController?.pushViewController(countryResultVC, animated: true)
+    }
+    
+    @IBAction func searchCountryNameButtonClick(_ sender: UIButton) {
+    }
 }
 
